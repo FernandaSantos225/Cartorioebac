@@ -74,7 +74,7 @@ int consulta()
 	
 	if(file == NULL)
 	{
-		printf("Não foi possivel abrir o arquivo, não localizado!.\n");
+		printf("Não foi possível abrir o arquivo, não localizado!.\n");
 	}
 	
 	while(fgets(conteudo, 200, file)!=NULL);
@@ -121,6 +121,7 @@ int main ()
 	  printf("\t1- Registrar nomes\n");
 	  printf("\t2- Consultar nomes\n");
 	  printf("\t3- Deletar nomes\n\n");
+	  printf("\t4- Sair do sistema\n\n");
 	  printf("Opção:");//Fim do menu
   	 
 	 scanf("%d", &opcao);//Armazenando escolha do usuário
@@ -139,6 +140,11 @@ int main ()
 	    	
 	    	case 3:
 	    	deletar();
+	    	break;
+	    	
+	    	case 4:
+	    	printf("Obrigada por utilizar o sistema!\n");
+	    	return 0;
 	    	break;
 	    	
 	    	default: 
